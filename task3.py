@@ -1,7 +1,7 @@
 
 board = list(range(1,10))
 
-def doers_tic(board):
+def board_tic(board):
     print('-'*12)
     for i in range(3):
         print('|', board[0+i*3],'|', board[1+i*3], '|', board[2+i*3], '|')
@@ -38,7 +38,7 @@ def game(board):
     counter =0
     vic = False
     while not vic:
-        doers_tic(board)
+        board_tic(board)
         if counter % 2 == 0:
             choice('X')
         else:
@@ -52,5 +52,5 @@ def game(board):
                 break
             if counter == 9:
                 print('Ничья')
-        design_board(board)
+        board_tic(board)
 game(board)
